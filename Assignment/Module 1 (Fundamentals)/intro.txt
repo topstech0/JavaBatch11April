@@ -1,0 +1,39 @@
+
+Chirag Kakadiya
+Himesh Rana
+
+
+ -> Java
+
+- it is a OOP (Object Orient Programming) Model
+- Java is used to build many different kind of Applications
+
+ like Desktop , Web Application,Gaming Application, Making Services, Console Application.
+
+ -> It is simple and easy to learn, but it needs a prerequisite. like learning C,C++.
+
+ -> Features of Java
+
+ 1) Garbage Collector
+ 2) Exception Handling
+ 3) File Handling through Serialization
+ 4) Multi-threading Concept
+ 5) Collections and Generics.
+
+
+  Java have 3 versions.
+
+  1) Java Standard Edition (JSE)  Core Java
+  2) Java Enterprize Edition (JEE) Advance Java
+  3) Java microservices Edition (JME) Creating Services
+
+
+
+
+
+
+
+
+
+
+
