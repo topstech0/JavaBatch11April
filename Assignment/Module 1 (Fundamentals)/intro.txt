@@ -28,6 +28,25 @@ Himesh Rana
   3) Java microservices Edition (JME) Creating Services
 
 
+	src : It is a Classpath root folder.
+	.jar files -> java archived files
+	
+	In Java, a filename will always be same as the class-name.
+
+	JDK,JRE,JVM
+	
+	JDK (Java Development Kit)
+
+	- it internally contains JRE and JVM
+
+	-JRE (Java Runtime Environment)
+
+	  - it handles all the execution part of the class.
+
+	-JVM (Java Virtual Machine)
+	
+	 - Because of JVM, java is platform Independent.
+	 - it is because of the bytecode file, teh java is pi.
 
 
 
