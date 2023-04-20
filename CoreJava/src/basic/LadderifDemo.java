@@ -28,8 +28,27 @@ public class LadderifDemo {
 		System.out.println("Name : "+name);		
 		System.out.println("Total Marks Obtained : "+tot+"/ 300");
 		System.out.println("Percentage Gained : "+per);
-		
-		
+		System.out.print("Grade : ");
+		if(per>=75)
+		{
+			System.out.print("Distinction");
+		}
+		else if(per>=60)
+		{
+			System.out.print("First Class");
+		}
+		else if(per>=50)
+		{
+			System.out.print("Second Class");
+		}
+		else if(per>=40)
+		{
+			System.out.print("Pass Class");
+		}
+		else
+		{
+			System.out.print("Fail!!");
+		}
 		
 	}
 	
