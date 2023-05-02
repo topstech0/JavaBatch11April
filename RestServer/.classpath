@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/aopalliance-repackaged-2.4.0-b34.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/asm-debug-all-5.0.4.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/hk2-api-2.4.0-b34.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/hk2-locator-2.4.0-b34.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/hk2-utils-2.4.0-b34.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/javax.inject-2.4.0-b34.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jaxb-api-2.2.7.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-client.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-common.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-guava-2.23.1.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-media-jaxb.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jersey-server.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/servlet-api.jar"/>
+	<classpathentry kind="lib" path="F:/Downloads/RestJars/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
