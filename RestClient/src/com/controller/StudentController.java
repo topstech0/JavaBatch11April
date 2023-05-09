@@ -24,7 +24,7 @@ import com.google.gson.reflect.TypeToken;
 public class StudentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	String WebServer="http://localhost:8080/RestServer/";
+	String WebServer="http://localhost:8086/RestServer/";
 	ClientConfig config=null;
 	Client client=null;
 	WebTarget target=null;
