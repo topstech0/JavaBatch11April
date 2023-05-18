@@ -69,10 +69,13 @@ class checkingAccount {
 public class BankDemo {
 	public static void main(String[] args) {
 		
-		checkingAccount ca = new checkingAccount(3369878997797l);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Account No. : ");
+		long accno = sc.nextLong();
+		checkingAccount ca = new checkingAccount(accno);
 		ca.checkBalance();
 		
-		Scanner sc = new Scanner(System.in);
+		
 		// Depositing
 		System.out.print("\nEnter Amount to Deposit : ");
 		double amt = sc.nextDouble();
