@@ -4,10 +4,15 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class SwingDemo implements ActionListener {
@@ -87,19 +92,119 @@ public class SwingDemo implements ActionListener {
 		
 		if(ae.getSource()==b1)
 		{
-			System.out.println("Insert Clicked.");
+			//System.out.println("Insert Clicked.");
+			try {
+				// 1) Import the Driver
+				Class.forName("com.mysql.jdbc.Driver");
+				
+				//2) Establish the Connection
+				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/april13", "root", "");
+				
+				//3) Write the Query
+				String sql = "insert into employee (e_name,e_email,e_mobile) values (?,?,?)";
+				
+				//4) Prepare Statement
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setString(1, t2.getText());
+				pst.setString(2, t3.getText());
+				pst.setLong(3, Long.parseLong(t4.getText()));
+				
+				// 5) Execute the Query
+				pst.executeUpdate();
+				
+				JOptionPane.showMessageDialog(f, "Data inserted successfully.");
+				
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				
+				
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
 		}
 		else if(ae.getSource()==b2)
 		{
-			System.out.println("Search Clicked.");
+			//System.out.println("Search Clicked.");
+			
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/april13", "root", "");
+				String sql = "select * from  employee where e_id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, Integer.parseInt(t1.getText()));
+				ResultSet rs = pst.executeQuery();
+				if(rs.next())
+				{
+					t2.setText(rs.getString("e_name"));
+					t3.setText(rs.getString("e_email"));
+					t4.setText(rs.getString("e_mobile"));					
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(f, "Id not Found.");
+					t1.setText("");
+					t2.setText("");
+					t3.setText("");
+					t4.setText("");
+				}
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
 		}
 		else if(ae.getSource()==b3)
 		{
-			System.out.println("Update Clicked.");
+			//System.out.println("Update Clicked.");
+			
+			try {
+				
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/april13","root","");
+				String sql = "update employee set e_name=?,e_email=?,e_mobile=? where e_id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setString(1, t2.getText());
+				pst.setString(2, t3.getText());
+				pst.setLong(3, Long.parseLong(t4.getText()));
+				pst.setInt(4, Integer.parseInt(t1.getText()));
+				pst.executeUpdate();
+				
+				JOptionPane.showMessageDialog(f, "Data updated successfully.");
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		else if(ae.getSource()==b4)
 		{
-			System.out.println("Delete Clicked.");
+			//System.out.println("Delete Clicked.");
+			
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/april13", "root", "");
+				String sql = "delete from employee where e_id=?";
+				PreparedStatement pst = conn.prepareStatement(sql);
+				pst.setInt(1, Integer.parseInt(t1.getText()));
+				pst.executeUpdate();
+				JOptionPane.showMessageDialog(f, "Data deleted successfully.");
+				t1.setText("");
+				t2.setText("");
+				t3.setText("");
+				t4.setText("");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		
